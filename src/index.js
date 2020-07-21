@@ -1,7 +1,8 @@
 import Board from './classes/Board';
+import Player from './classes/Player';
 
-let board = new Board(['x','o','','x','o','','o','','x']);
+let board = new Board(['x','o','','','','','o','','x']);
 board.printFormattedBoard();
-console.log(board.insert('x',2));
-board.printFormattedBoard();
-console.log(board.getAvailableMoves());
+let p = new Player();
+console.log(p.getBestMove(board,false));
+console.log(p.nodes_map);
